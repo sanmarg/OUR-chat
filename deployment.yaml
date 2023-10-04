@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ourchat-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ourchat
+  template:
+    metadata:
+      labels:
+        app: ourchat
+    spec:
+      containers:
+        - name: ourchat-container
+          image: sanmargparanjpe/ourchat
+          ports:
+            - containerPort: 5000
+          command:
+            - "docker"
+            - "run"
+            - "-it"
+            - "-net=host"
+            - "sanmargparanjpe/ourchat"
