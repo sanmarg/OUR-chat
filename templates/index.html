@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR Chat</title>
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/filled-chat.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <div id="username-page" class="container">
+        <img width="48" height="48" src="https://img.icons8.com/color/48/filled-chat.png" alt="filled-chat" style="text-align: center;"class="image-container"/>
+        
+        
+        <br>
+        <br>
+        <h1>Enter Your Username</h1>
+        <input id="username-input" autocomplete="off" placeholder="Your username">
+        <button id="username-submit">Join Chat</button>
+    </div>
+
+    <div id="chat-page" class="container hidden">
+        <img width="48" height="48" src="https://img.icons8.com/color/48/filled-chat.png" alt="filled-chat" style="text-align: center;" class="image-container"/>
+        
+        
+        <br>
+        <br>
+        <h1>Welcome to the Chat, <span id="chat-username"></span>!</h1>
+        <ul id="messages-list"></ul>
+        <form id="message-form">
+            <input id="message-input" autocomplete="off" placeholder="Type a message...">
+            <button type="submit" style="color: black;">Send</button>
+            
+            <div id="reaction-buttons" style="margin-top: 10px;">
+                <button class="reaction" data-reaction="👍">👍</button>
+                <button class="reaction" data-reaction="❤️">❤️</button>
+                <button class="reaction" data-reaction="😄">😄</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="/static/main.js"></script>
+</body>
+</html>
