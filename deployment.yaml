@@ -17,9 +17,3 @@ spec:
           image: sanmargparanjpe/ourchat
           ports:
             - containerPort: 5000
-          command:
-            - "docker"
-            - "run"
-            - "-it"
-            - "-net=host"
-            - "sanmargparanjpe/ourchat"
